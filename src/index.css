@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    direction: rtl;
+    background-color: #f7f7f7;
+}
+
+#TICKETS::-webkit-scrollbar {
+    width: 5px;
+    background-color: #fff;
+}
+
+#TICKETS::-webkit-scrollbar-track {
+    margin: 10px;
+}
+
+#TICKETS::-webkit-scrollbar-thumb {
+    width: 5px;
+    background-color: #a02777;
+    border-radius: 10px;
+}
+
+.scroller {
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.scroller>div {
+    position: absolute;
+    top: 0;
+    animation: slide 6s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        top: 0;
+    }
+
+    25% {
+        top: -2em;
+    }
+
+    50% {
+        top: -4em;
+    }
+
+    75% {
+        top: -6em;
+    }
+
+    100%{
+        top:-8em;
+    }
+}
